@@ -12,7 +12,7 @@ const ModuloDetalhes = () => {
     useEffect(() => {
         // Busca os detalhes do módulo
         axios
-            .get(`http://localhost:5000/api/modulos/${id}`)
+            .get(`https://excel-server-7tkp.onrender.com/api/modulos/${id}`)
             .then((response) => {
                 setModulo(response.data);
             })
@@ -22,7 +22,9 @@ const ModuloDetalhes = () => {
 
         // Busca as aulas do módulo
         axios
-            .get(`http://localhost:5000/api/modulos/${id}/aulas`)
+            .get(
+                `https://excel-server-7tkp.onrender.com/api/modulos/${id}/aulas`
+            )
             .then((response) => {
                 setAulas(response.data);
             })
