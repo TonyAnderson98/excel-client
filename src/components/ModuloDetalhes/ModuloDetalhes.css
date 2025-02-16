@@ -6,7 +6,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 20px auto;
-    max-width: 800px;
+    max-width: 1400px;
 }
 
 .modulo-detalhes h1 {
@@ -54,4 +54,32 @@
     max-width: 100%;
     border-radius: 8px;
     margin-top: 10px;
+}
+/* Estilo do botão "Voltar" */
+.voltar-button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.voltar-button:hover {
+    background-color: #0056b3;
+}
+
+.cards_aula {
+    background-color: #d4d4d4;
+    display: flex;
+}
+
+.cards_aula li {
+    transition: all 0.5s;
+}
+
+.cards_aula li:hover {
+    scale: 1.1;
 }

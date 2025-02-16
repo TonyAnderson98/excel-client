@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"; // Importe o React Router
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Modulo from "./components/Modulo";
-import ModuloDetalhes from "./components/ModuloDetalhes"; // Criaremos este componente depois
+import ModuloDetalhes from "./components/ModuloDetalhes";
 import "./App.css";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:5000/api/modulos")
+            .get("https://excel-server-7tkp.onrender.com/api/modulos")
             .then((response) => {
                 setModulos(response.data);
             })
@@ -23,16 +23,24 @@ function App() {
         <Router>
             <div className="App">
                 <h1>Módulos</h1>
-                <div className="modulos-container">
-                    {modulos.map((modulo) => (
-                        <Link to={`/modulo/${modulo._id}`} key={modulo._id}>
-                            <Modulo modulo={modulo} />
-                        </Link>
-                    ))}
-                </div>
-
-                {/* Configuração das rotas */}
                 <Routes>
+                    {/* Rota para a lista de módulos */}
+                    <Route
+                        path="/"
+                        element={
+                            <div className="modulos-container">
+                                {modulos.map((modulo) => (
+                                    <Link
+                                        to={`/modulo/${modulo._id}`}
+                                        key={modulo._id}
+                                    >
+                                        <Modulo modulo={modulo} />
+                                    </Link>
+                                ))}
+                            </div>
+                        }
+                    />
+                    {/* Rota para os detalhes do módulo */}
                     <Route path="/modulo/:id" element={<ModuloDetalhes />} />
                 </Routes>
             </div>

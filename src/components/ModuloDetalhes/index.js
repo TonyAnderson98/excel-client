@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./ModuloDetalhes.css";
 
 const ModuloDetalhes = () => {
     const { id } = useParams(); // Pega o ID do módulo da URL
+    const navigate = useNavigate(); // Para navegar de volta à lista de módulos
     const [aulas, setAulas] = useState([]);
     const [modulo, setModulo] = useState(null);
 
@@ -36,8 +37,13 @@ const ModuloDetalhes = () => {
 
     return (
         <div className="modulo-detalhes">
+            <button onClick={() => navigate("/")} className="voltar-button">
+                Voltar para Módulos
+            </button>
             <h1>{modulo.titulo}</h1>
-            <ul>
+            <p>Número do Módulo: {modulo.modulo_number}</p>
+            <h2>Aulas:</h2>
+            <ul className="cards_aula">
                 {aulas.map((aula) => (
                     <li key={aula._id}>
                         <h3>{aula.titulo}</h3>

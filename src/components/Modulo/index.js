@@ -1,5 +1,5 @@
 import React from "react";
-import "./modulo.css"; // Importe o CSS
+import "./modulo.css";
 
 const Modulo = ({ modulo }) => {
     return (
@@ -8,14 +8,6 @@ const Modulo = ({ modulo }) => {
             <p className="modulo-descricao">
                 Número do Módulo: {modulo.modulo_number}
             </p>
-            <div className="modulo-aulas">
-                <h3>Aulas:</h3>
-                <ul>
-                    {modulo.aulas.map((aula, index) => (
-                        <li key={index}>{aula}</li>
-                    ))}
-                </ul>
-            </div>
         </div>
     );
 };
