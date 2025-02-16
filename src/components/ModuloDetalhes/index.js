@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./ModuloDetalhes.css";
+import styles from "./modulodetalhes.module.css";
 
 const ModuloDetalhes = () => {
     const { id } = useParams(); // Pega o ID do módulo da URL
@@ -12,7 +13,7 @@ const ModuloDetalhes = () => {
     useEffect(() => {
         // Busca os detalhes do módulo
         axios
-            .get(`https://excel-server-7tkp.onrender.com/api/modulos/${id}`)
+            .get(`${process.env.REACT_APP_API_URL}/api/modulos/${id}`)
             .then((response) => {
                 setModulo(response.data);
             })
@@ -22,9 +23,7 @@ const ModuloDetalhes = () => {
 
         // Busca as aulas do módulo
         axios
-            .get(
-                `https://excel-server-7tkp.onrender.com/api/modulos/${id}/aulas`
-            )
+            .get(`${process.env.REACT_APP_API_URL}/api/modulos/${id}/aulas`)
             .then((response) => {
                 setAulas(response.data);
             })
@@ -42,15 +41,19 @@ const ModuloDetalhes = () => {
             <button onClick={() => navigate("/")} className="voltar-button">
                 Voltar para Módulos
             </button>
-            <h1>{modulo.titulo}</h1>
-            <p>Número do Módulo: {modulo.modulo_number}</p>
-            <h2>Aulas:</h2>
-            <ul className="cards_aula">
+            <h1 className={styles.moduloTitulo}>{modulo.titulo}</h1>
+            <ul className="card_aula">
                 {aulas.map((aula) => (
                     <li key={aula._id}>
-                        <h3>{aula.titulo}</h3>
-                        <p>{aula.descricao}</p>
-                        <img src={aula.imagemCapa} alt={aula.titulo} />
+                        <div className="aula-capa">
+                            <img src={aula.imagemCapa} alt={aula.titulo} />
+                        </div>
+                        <div className="aula-body">
+                            <h3 className="aula-titulo">{aula.titulo}</h3>
+                            <span className="aula-descricao">
+                                {aula.descricao}
+                            </span>
+                        </div>
                     </li>
                 ))}
             </ul>

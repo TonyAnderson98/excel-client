@@ -1,54 +1,41 @@
-/* Estilo do card do módulo */
+.modulos-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .modulo-card {
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    width: 500px;
+    height: 300px;
     margin: 10px;
-    max-width: 300px;
-    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 10px;
+    transition: all 0.25s;
+    background-position: center;
+    background-size: cover;
 }
 
 .modulo-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    scale: 1.1;
 }
 
-/* Estilo do título do módulo */
+.modulo-card::after {
+    content: "";
+    z-index: 0;
+    width: 100%;
+    height: 80px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
 .modulo-titulo {
-    font-size: 1.5rem;
-    color: #333333;
+    color: white;
+    text-decoration: none;
+    z-index: 10;
+    position: absolute;
     margin-bottom: 10px;
-}
-
-/* Estilo da descrição do módulo */
-.modulo-descricao {
-    font-size: 1rem;
-    color: #666666;
-    margin-bottom: 15px;
-}
-
-/* Estilo da lista de aulas */
-.modulo-aulas h3 {
-    font-size: 1.2rem;
-    color: #444444;
-    margin-bottom: 10px;
-}
-
-.modulo-aulas ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.modulo-aulas li {
-    font-size: 1rem;
-    color: #555555;
-    padding: 5px 0;
-    border-bottom: 1px solid #eeeeee;
-}
-
-.modulo-aulas li:last-child {
-    border-bottom: none;
 }

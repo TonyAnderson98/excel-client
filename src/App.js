@@ -10,7 +10,7 @@ function App() {
 
     useEffect(() => {
         axios
-            .get("https://excel-server-7tkp.onrender.com/api/modulos")
+            .get(`${process.env.REACT_APP_API_URL}/api/modulos`)
             .then((response) => {
                 setModulos(response.data);
             })

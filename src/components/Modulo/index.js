@@ -1,13 +1,14 @@
 import React from "react";
 import "./modulo.css";
+import styles from "./styles.module.css";
 
 const Modulo = ({ modulo }) => {
     return (
-        <div className="modulo-card">
-            <h2 className="modulo-titulo">{modulo.titulo}</h2>
-            <p className="modulo-descricao">
-                Número do Módulo: {modulo.modulo_number}
-            </p>
+        <div
+            className="modulo-card"
+            style={{ backgroundImage: `url(${modulo.modulo_capa})` }}
+        >
+            <h2 className={styles.moduloTitulo}>{modulo.titulo}</h2>
         </div>
     );
 };
