@@ -1,0 +1,57 @@
+/* Estilo da página de detalhes do módulo */
+.modulo-detalhes {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.modulo-detalhes h1 {
+    font-size: 2rem;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.modulo-detalhes p {
+    font-size: 1.2rem;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.modulo-detalhes h2 {
+    font-size: 1.5rem;
+    color: #444444;
+    margin-bottom: 20px;
+}
+
+.modulo-detalhes ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modulo-detalhes li {
+    font-size: 1.2rem;
+    color: #555555;
+    padding: 20px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.modulo-detalhes li:last-child {
+    border-bottom: none;
+}
+
+.modulo-detalhes h3 {
+    font-size: 1.4rem;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.modulo-detalhes img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}

@@ -1,0 +1,54 @@
+/* Estilo do card do módulo */
+.modulo-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    max-width: 300px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.modulo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo do título do módulo */
+.modulo-titulo {
+    font-size: 1.5rem;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+/* Estilo da descrição do módulo */
+.modulo-descricao {
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+/* Estilo da lista de aulas */
+.modulo-aulas h3 {
+    font-size: 1.2rem;
+    color: #444444;
+    margin-bottom: 10px;
+}
+
+.modulo-aulas ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modulo-aulas li {
+    font-size: 1rem;
+    color: #555555;
+    padding: 5px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.modulo-aulas li:last-child {
+    border-bottom: none;
+}
