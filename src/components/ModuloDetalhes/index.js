@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./ModuloDetalhes.css";
 import styles from "./modulodetalhes.module.css";
 
 const ModuloDetalhes = () => {
@@ -37,20 +36,23 @@ const ModuloDetalhes = () => {
     }
 
     return (
-        <div className="modulo-detalhes">
-            <button onClick={() => navigate("/")} className="voltar-button">
+        <div className={styles.moduloDetalhes}>
+            <button
+                onClick={() => navigate("/")}
+                className={styles.voltarButton}
+            >
                 Voltar para Módulos
             </button>
             <h1 className={styles.moduloTitulo}>{modulo.titulo}</h1>
             <ul className="card_aula">
                 {aulas.map((aula) => (
                     <li key={aula._id}>
-                        <div className="aula-capa">
+                        <div className={styles.aulaCapa}>
                             <img src={aula.imagemCapa} alt={aula.titulo} />
                         </div>
-                        <div className="aula-body">
-                            <h3 className="aula-titulo">{aula.titulo}</h3>
-                            <span className="aula-descricao">
+                        <div className={styles.aulaBody}>
+                            <h3 className={styles.aulaTitulo}>{aula.titulo}</h3>
+                            <span className={styles.aulaDescricao}>
                                 {aula.descricao}
                             </span>
                         </div>

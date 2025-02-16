@@ -1,5 +1,79 @@
 .moduloTitulo {
     font-size: 3rem;
     font-weight: 800;
-    color: black;
+    color: white;
+}
+
+.moduloDetalhes {
+    border: 1px dashed #303030;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1400px;
+}
+
+.moduloDetalhes ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.moduloDetalhes li {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    color: white;
+    background-color: rgb(17, 17, 17);
+    margin: 10px;
+    transition: all 0.25s;
+}
+
+.moduloDetalhes img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.moduloDetalhes li:hover {
+    scale: 1.05;
+    cursor: pointer;
+    background-color: rgb(44, 44, 44);
+}
+
+/* Aulas */
+.aulaBody {
+    width: 800px;
+}
+
+.aulaCapa {
+    display: block;
+    width: 400px;
+    height: auto;
+}
+
+.aulaTitulo {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.aulaDescricao {
+    font-size: 1.4rem;
+    color: #b1b1b1;
+}
+
+/* Botão Voltar */
+.voltarButton {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.voltarButton:hover {
+    background-color: #0056b3;
 }
