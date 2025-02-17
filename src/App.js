@@ -3,6 +3,7 @@ import axios from "axios";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Modulo from "./components/Modulo";
 import ModuloDetalhes from "./components/ModuloDetalhes";
+import AulaDetalhes from "./components/AulaDetalhes"; // Importe o novo componente
 import "./App.css";
 
 function App() {
@@ -42,6 +43,8 @@ function App() {
                     />
                     {/* Rota para os detalhes do módulo */}
                     <Route path="/modulo/:id" element={<ModuloDetalhes />} />
+                    {/* Rota para os detalhes da aula */}
+                    <Route path="/aula/:id" element={<AulaDetalhes />} />
                 </Routes>
             </div>
         </Router>

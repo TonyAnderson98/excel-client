@@ -41,25 +41,36 @@
 }
 
 /* Aulas */
+.cardAula {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    text-decoration: none;
+}
+
 .aulaBody {
     width: 800px;
+    text-decoration: none;
 }
 
 .aulaCapa {
     display: block;
     width: 400px;
     height: auto;
+    text-decoration: none;
 }
 
 .aulaTitulo {
     font-size: 1.8rem;
     color: white;
     margin-bottom: 10px;
+    text-decoration: none;
 }
 
 .aulaDescricao {
     font-size: 1.4rem;
     color: #b1b1b1;
+    text-decoration: none;
 }
 
 /* Botão Voltar */
@@ -76,4 +87,17 @@
 
 .voltarButton:hover {
     background-color: #0056b3;
+}
+
+/* Estilo para o Link */
+.aulaLink {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Herda a cor do texto do elemento pai */
+}
+
+/* Estilo para o título e descrição dentro do Link */
+.aulaLink h3,
+.aulaLink span {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Herda a cor do texto do elemento pai */
 }

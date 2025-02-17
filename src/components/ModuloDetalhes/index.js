@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom"; // Adicione o Link
 import axios from "axios";
 import styles from "./modulodetalhes.module.css";
 
@@ -44,18 +44,30 @@ const ModuloDetalhes = () => {
                 Voltar para Módulos
             </button>
             <h1 className={styles.moduloTitulo}>{modulo.titulo}</h1>
-            <ul className="card_aula">
+            <ul className={styles.cardsAulaContainer}>
                 {aulas.map((aula) => (
                     <li key={aula._id}>
-                        <div className={styles.aulaCapa}>
-                            <img src={aula.imagemCapa} alt={aula.titulo} />
-                        </div>
-                        <div className={styles.aulaBody}>
-                            <h3 className={styles.aulaTitulo}>{aula.titulo}</h3>
-                            <span className={styles.aulaDescricao}>
-                                {aula.descricao}
-                            </span>
-                        </div>
+                        <Link
+                            to={`/aula/${aula._id}`}
+                            className={styles.aulaLink}
+                        >
+                            <div className={styles.cardAula}>
+                                <div className={styles.aulaCapa}>
+                                    <img
+                                        src={`https://img.youtube.com/vi/${aula.videoId}/sddefault.jpg`}
+                                        alt={aula.titulo}
+                                    />
+                                </div>
+                                <div className={styles.aulaBody}>
+                                    <h3 className={styles.aulaTitulo}>
+                                        {aula.titulo}
+                                    </h3>
+                                    <span className={styles.aulaDescricao}>
+                                        {aula.descricao}
+                                    </span>
+                                </div>
+                            </div>
+                        </Link>
                     </li>
                 ))}
             </ul>
