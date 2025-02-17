@@ -1,0 +1,57 @@
+/* Estilo do Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a1a1a; /* Cor de fundo escura */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Container da Logo */
+.logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+/* Link da Logo */
+.logoLink {
+    text-decoration: none;
+}
+
+/* Imagem da Logo */
+.logo {
+    height: 50px; /* Ajuste o tamanho da logo */
+}
+
+/* Navegação */
+.nav {
+    display: flex;
+}
+
+/* Lista de Navegação */
+.navList {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Item de Navegação */
+.navItem {
+    margin-left: 20px;
+}
+
+/* Link de Navegação */
+.navLink {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navLink:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+}

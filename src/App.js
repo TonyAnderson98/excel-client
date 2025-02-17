@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Header from "./components/Header"; // Importe o Header
 import Modulo from "./components/Modulo";
 import ModuloDetalhes from "./components/ModuloDetalhes";
-import AulaDetalhes from "./components/AulaDetalhes"; // Importe o novo componente
+import AulaDetalhes from "./components/AulaDetalhes";
 import "./App.css";
 
 function App() {
@@ -22,8 +23,8 @@ function App() {
 
     return (
         <Router>
+            <Header /> {/* Adicione o Header aqui */}
             <div className="App">
-                <h1>Módulos</h1>
                 <Routes>
                     {/* Rota para a lista de módulos */}
                     <Route
